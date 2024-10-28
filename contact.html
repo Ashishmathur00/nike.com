@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Our Services - Nike</title>
+</head>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, .active {
+    color: #007bff;
+}
+
+main {
+    padding: 20px;
+}
+
+.services {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    padding: 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button.learn-more {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.learn-more:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">Nike</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="active">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card" data-service="Custom Fit">
+                    <h3>Custom Fit</h3>
+                    <p>Experience shoes tailored to your unique foot shape for optimal comfort.</p>
+                    <button class="learn-more">Learn More</button>
+                </div>
+                <div class="service-card" data-service="Personal Training">
+                    <h3>Personal Training</h3>
+                    <p>Get expert training guidance to elevate your athletic performance.</p>
+                    <button class="learn-more">Learn More</button>
+                </div>
+                <div class="service-card" data-service="Virtual Events">
+                    <h3>Virtual Events</h3>
+                    <p>Join our online events and connect with athletes and trainers worldwide.</p>
+                    <button class="learn-more">Learn More</button>
+                </div>
+                <div class="service-card" data-service="Product Trials">
+                    <h3>Product Trials</h3>
+                    <p>Try our products before you buy and find the perfect fit for you.</p>
+                    <button class="learn-more">Learn More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nike, Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.learn-more').forEach(button => {
+    button.addEventListener('click', function() {
+        const serviceName = this.parentElement.getAttribute('data-service');
+        alert(`Learn more about: ${serviceName}`);
+    });
+});
+
+    </script>
+</body>
+</html>
